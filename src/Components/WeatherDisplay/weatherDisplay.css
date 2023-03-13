@@ -1,0 +1,17 @@
+.weather-display {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(28, 211, 211);
+}
+
+.weather-display .info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.weather-display .weekday {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

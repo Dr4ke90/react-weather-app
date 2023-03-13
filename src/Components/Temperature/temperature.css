@@ -1,0 +1,18 @@
+.temperature {}
+
+.temperature #temperature {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.temperature .feelslike {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature .feelslike #feelslike {
+    font-size: 15px;
+    font-weight: bold;
+}

@@ -1,0 +1,21 @@
+.weather-condition {
+    padding: 10px;
+    border: 2px double black;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.weather-condition img {
+    width: 100px;
+    height: auto;
+}
+
+.weather-condition .text {
+    position: relative;
+    top:-20px
+}

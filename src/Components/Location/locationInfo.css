@@ -1,0 +1,10 @@
+.location-info {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.location-info span {
+    font-size: 25px;
+}

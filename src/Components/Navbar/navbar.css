@@ -1,0 +1,23 @@
+.navbar {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(20, 19, 19), rgb(56, 118, 210));
+    color: white;
+    flex-wrap: nowrap;
+}
+
+.navbar .left-elements {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar .right-elements {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar .right-elements p {
+    padding: 0 20px;
+}

@@ -1,0 +1,26 @@
+.forecast {
+    padding: 20px 0;
+}
+
+.forecast .forecast-list {
+    display: flex;
+    justify-content: space-around;
+    border: 2px double black;
+    border-radius: 30px;
+    margin: 0 20px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.forecast .forecast-list .weather-card-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+.forecast .forecast-list .weather-card-container #weekday {
+    font-weight: bold;
+}
