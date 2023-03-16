@@ -1,12 +1,12 @@
-import React, { useState, createContext, useLayoutEffect } from "react";
+import React, { useState, createContext } from "react";
 import axios from "axios";
 
 export const LocationContext = createContext();
 
 export const LocationProvider = ({ children }) => {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState(null);
 
-  useLayoutEffect(() => {
+  
     const getLocation = () => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(getCity);
@@ -29,11 +29,9 @@ export const LocationProvider = ({ children }) => {
       }
     };
 
-    getLocation();
-  }, []);
 
   return (
-    <LocationContext.Provider value={{ city }}>
+    <LocationContext.Provider value={{ city, getLocation }}>
       {children}
     </LocationContext.Provider>
   );

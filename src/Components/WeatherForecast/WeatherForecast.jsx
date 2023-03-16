@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../Card/Card";
 import './weatherForecast.css'
 
 function Forecast({weatherData}) {
@@ -18,20 +19,21 @@ function Forecast({weatherData}) {
     const maxWind = `${item.day.maxwind_kph} km/h`;
     
     return (
-      <div key={index} className="weather-card-container">
+      <Card key={index} className="weather-card-container">
         <p id="weekday">{capitalizedDay}</p>
+        <p className="date">{timestamp}</p>
         <img src={icon} alt="" />
         <p>{`Temp : ${maxtemp}`}</p>
         <p>{`Umiditate : ${humidity}`}</p>
         <p>{`Vant : ${maxWind}`}</p>
-      </div>
+      </Card>
     );
   });
 
   return (
-    <div className="forecast">
-      <div className="forecast-list">{forecastList}</div>
-    </div>
+    <Card className="card">
+      {forecastList}
+    </Card>
   );
 }
 

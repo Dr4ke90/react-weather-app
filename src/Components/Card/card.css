@@ -1,0 +1,19 @@
+.card {
+    padding: 10px;
+    border: 2px double black;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 10px;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+        align-items: center;
+        margin: 5px 10px;
+    }
+}

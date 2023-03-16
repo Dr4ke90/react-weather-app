@@ -1,21 +1,30 @@
 .weather-condition {
-    padding: 10px;
-    border: 2px double black;
-    border-radius: 30px;
-    margin-bottom: 20px;
+    padding: 15px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
     align-items: center;
-    width: 400px;
+    justify-content: center;
+    position: absolute;
 }
 
-.weather-condition img {
-    width: 100px;
-    height: auto;
+
+.sun {
+opacity: 1;
+box-shadow: 0px 0px 15px 3px yellow;
+width: 200px;
+height: 200px;
+animation: sunpulse 2s alternate infinite;
+border-radius: 50%;
+background-image: radial-gradient(circle, #ffd200 95%, #f7971e);
 }
 
-.weather-condition .text {
-    position: relative;
-    top:-20px
+@keyframes sunpulse {
+from {
+    box-shadow: 0 0 100px #ff0, 0 0 100px #ff0;
 }
+to {
+    box-shadow: 0 0 25px #ff0, 0 0 75px #ff0;
+}
+}
+
+

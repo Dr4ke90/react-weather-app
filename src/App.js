@@ -1,16 +1,12 @@
 import React from "react";
+import Home from "./Pages/Home/Home";
 import Navbar from "./Components/Navbar/Navbar";
-import WeatherDisplay from "./Components/WeatherDisplay/WeatherDisplay";
 
-function App() {
- 
-
+export default function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <WeatherDisplay />
+      <Navbar />
+      <Home />
     </div>
   );
 }
-
-export default App;
