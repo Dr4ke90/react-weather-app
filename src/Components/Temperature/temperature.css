@@ -1,20 +1,20 @@
-.temperature #temperature {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.temperature .feelslike {
+.temperature {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.temperature .feelslike #feelslike {
-    font-size: 15px;
+.temperature img {
+    width: 120px;
+}
+
+.temperature #temperature {
+    font-size: 45px;
     font-weight: bold;
 }
 
-.temperature .card {
-    width: 200px;
+.temperature span {
+    font-size: 20px;
+    font-weight: lighter;
 }

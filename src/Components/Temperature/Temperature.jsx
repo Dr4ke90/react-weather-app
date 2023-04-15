@@ -1,18 +1,16 @@
 import React from "react";
-import Card from "../Card/Card";
 import './temperature.css'
 
 const Temperature = ({ weatherData }) => {
-  const { current } = weatherData;
+  const { day } = weatherData.forecast.forecastday[0];
+
+  const icon = day.condition.icon
 
   return (
-    <Card className="temperature card">
-      <p id="temperature">{`${current.temp_c} °C / ${current.temp_f} °F`}</p>
-      <div className="feelslike">
-        <p>Se sinte ca :</p>
-        <p id="feelslike">{`${current.feelslike_c} °C / ${current.feelslike_f} °F`}</p>
-      </div>
-    </Card>
+    <div className="temperature">
+      <img src={icon} alt="" />
+      <p id="temperature">{`${day.maxtemp_c}°`}<span>{`/${day.mintemp_c}°`}</span></p>
+    </div>
   );
 };
 

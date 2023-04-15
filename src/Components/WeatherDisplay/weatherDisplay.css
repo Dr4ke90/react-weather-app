@@ -1,17 +1,22 @@
 .weather-display {
     display: flex;
     flex-direction: column;
-    background-color: deepskyblue;
-    animation: skyChange 60s linear infinite;
 }
 
-.weather-display .info-wraper {
+.weather-display .wraper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+	flex-wrap: wrap;
+    background-color: rgb(137, 207, 235, 50%);
+    margin: 10px;
+}
+
+
+.weather-display .wraper .info-wrapper {
+    display: flex;
     justify-content: space-around;
 }
-
-
 
 .weather-display .weekday {
     display: flex;
@@ -25,33 +30,3 @@
     flex-wrap: wrap;
 }
 
-@keyframes skyChange {
-	0% {
-		background: deepskyblue;
-	}
-	25% {
-		background: deepskyblue;
-	}
-	32% {
-		background: aliceblue;
-	}
-	41% {
-		background: deepskyblue;
-	}
-	70% {
-		background: deepskyblue;
-	}
-	100% {
-		background: #00d2ff; /* fallback for old browsers */
-		background: -webkit-linear-gradient(
-			to right,
-			#3a7bd5,
-			#00d2ff
-		); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(
-			to right,
-			#3a7bd5,
-			#00d2ff
-		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	}
-}

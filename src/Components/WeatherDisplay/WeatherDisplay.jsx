@@ -1,7 +1,7 @@
 import { WeatherContext } from "../../Context/WeatherContext";
 import DateInfo from "../DateInfo/DateInfo";
 import WeatherDetails from "../WeatherDetails/WeatherDetails";
-import WeatherCondition from "../WeatherConditon/WeatherCondition";
+import Card from "../Card/Card";
 import AirQuality from "../AirQuality/AirQuality";
 import Forecast from "../WeatherForecast/WeatherForecast";
 import { useContext } from "react";
@@ -18,15 +18,14 @@ const WeatherDisplay = () => {
 
   return (
     <div className="weather-display">
-        <WeatherCondition weatherData={weatherData} />
-      <div className="weekday">
+      <Card className="wraper ">
         <DateInfo weatherData={weatherData} />
-      </div>
-      <div className="info-wraper">
-        <WeatherDetails weatherData={weatherData} />
-        <Temperature weatherData={weatherData} />
-        <AirQuality weatherData={weatherData} />
-      </div>
+        <div className="info-wrapper">
+          <WeatherDetails weatherData={weatherData} />
+          <Temperature weatherData={weatherData} />
+          <AirQuality weatherData={weatherData} />
+        </div>
+      </Card>
       <div className="forecast">
         <Forecast weatherData={weatherData} />
       </div>

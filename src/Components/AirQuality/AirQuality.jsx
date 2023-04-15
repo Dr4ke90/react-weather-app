@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "../Card/Card";
 import "./airQuality.css";
 
 const AirQuality = ({ weatherData }) => {
@@ -16,15 +15,12 @@ const AirQuality = ({ weatherData }) => {
   };
 
   return (
-    <Card className="air-info card">
-      <div className="title">
-        <p>Calitatea Aerului</p>
-      </div>
+    <div className="air-info">
       {Object.entries(airInfo).map(([key, value], index) => (
         <p key={key}>{`${key} : ${value.toFixed(6)}`}</p>
       ))}
       <div className="air-quality"></div>
-    </Card>
+    </div>
   );
 };
 

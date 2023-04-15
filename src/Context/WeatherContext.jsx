@@ -12,7 +12,7 @@ export const WeatherProvider = ({ children }) => {
   const getDefaultWeather = async () => {
     const cityValue = city ? city : "Bucharest";
     const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=0e94552db7dd463fad2141235230503&q=${cityValue}&days=13&aqi=yes&alerts=no`
+      `http://api.weatherapi.com/v1/forecast.json?key=0e94552db7dd463fad2141235230503&q=${cityValue}&days=10&aqi=yes&alerts=no`
     );
     const data = await response.json();
     setDefaultWeather(data);
@@ -20,7 +20,7 @@ export const WeatherProvider = ({ children }) => {
 
   const getCustomWeather = async (city) => {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=0e94552db7dd463fad2141235230503&q=${city}&days=13&aqi=yes&alerts=no`
+      `http://api.weatherapi.com/v1/forecast.json?key=0e94552db7dd463fad2141235230503&q=${city}&days=10&aqi=yes&alerts=no`
     );
     const data = await response.json();
     setCustomWeather(data);

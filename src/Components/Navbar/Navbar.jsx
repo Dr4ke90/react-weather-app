@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import WeatherForm from "../WeatherForm/WeatherForm";
 import { WeatherContext } from "../../Context/WeatherContext";
-import { useContext } from "react";
 import LocationInfo from "../Location/LocationInfo";
 import "./navbar.css";
 
@@ -23,6 +22,7 @@ const Navbar = () => {
           <WeatherForm />
         </div>
         <div className="right-elements">
+          <p>Home</p>
           <p>About</p>
         </div>
       </nav>

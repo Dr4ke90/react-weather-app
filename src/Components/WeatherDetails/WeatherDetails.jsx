@@ -1,31 +1,38 @@
 import React from "react";
-import Card from "../Card/Card";
 import './weatherDetails.css'
+import { WiHumidity } from 'react-icons/wi';
+import { BiWind } from 'react-icons/bi';
+import { BsCloudRain } from 'react-icons/bs';
+import { GiSnowing } from 'react-icons/gi';
+import { GiExpandedRays } from 'react-icons/gi';
+
+
+
+
 
 const WeatherDetails = ({weatherData}) => {
 
     const {current} = weatherData;
     const {day} = weatherData.forecast.forecastday[0]
 
-    const weatherDetails = {
-        Temp_Max : `: ${day.maxtemp_c} °C / ${day.maxtemp_f} °F`,
-        Temp_min : `: ${day.mintemp_c} °C / ${day.mintemp_f} °F`,
-        Umiditate : `: ${current.humidity} %`,
-        Vant : `: ${day.maxwind_kph} km/h / ${day.maxwind_mph} m/h`,
-        Ploaie : `: ${day.daily_chance_of_rain} %`,
-        Ninsoare : `: ${day.daily_chance_of_snow} %`,
-        Raze_UV : `: ${day.uv}`
-    }
+    const weatherDetails = [
+      {name: 'humidity', value: current.humidity, icon: <WiHumidity />, um: '%'},
+      {name: 'wind', value: day.maxwind_kph, icon: <BiWind />, um: 'km/h'},
+      {name: 'rain', value: day.daily_chance_of_rain, icon: <BsCloudRain/>, um: '%'},
+      {name: 'snow', value: day.daily_chance_of_snow, icon: <GiSnowing/>, um: '%'},
+      {name: 'uv', value: day.uv, icon: <GiExpandedRays/>, um: 'uv'},
+    ]
+        
 
   return (
-  <Card className="weather-details card">
-    <div>
-      <p className="title">Detalii</p>
-    </div>
-    {Object.entries(weatherDetails).map(([key, value]) => (
-        <p key={key}>{key + value}</p>
+  <div className="weather-details">
+    {weatherDetails.map((item) => (
+         <div key={item.name} className="item"> 
+            {React.cloneElement(item.icon, { size: '1.5em'})}
+            <p>{`${item.value} ${item.um}`}</p>
+         </div>
     ))}
-  </Card> )
+  </div> )
 };
 
 export default WeatherDetails;

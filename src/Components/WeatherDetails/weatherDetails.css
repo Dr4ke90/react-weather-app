@@ -5,3 +5,11 @@
     padding: 10px;
     font-weight: bold;
 }
+
+.weather-details .item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
